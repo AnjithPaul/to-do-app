@@ -6,23 +6,23 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
+#   test:
+#     name: Test
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 16.13.0
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.13.0
-    - run: npm install
-    - run: npm run build --if-present
-    - run: npm test --passWithNoTests
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Use Node.js 16.13.0
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: 16.13.0
+#     - run: npm install
+#     - run: npm run build --if-present
+#     - run: npm test --passWithNoTests
 
   deploy:
     name: Deploy
-    needs: test
+#     needs: test
     runs-on: ubuntu-latest
 
     steps:
